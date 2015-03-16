@@ -1,7 +1,10 @@
 Etsydemo::Application.routes.draw do
-  devise_for :users
-  resources :listings
 
+  devise_for :users
+  resources :listings do
+    resources :orders
+
+ end
   get "pages/about"
   get "pages/contact"
   get 'seller' => "listings#seller"
@@ -61,5 +64,5 @@ Etsydemo::Application.routes.draw do
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
-  #   end
-end
+     end
+
