@@ -2,6 +2,14 @@
  <h2> The easiest way to Buy or <%= link_to "Sell", new_user_registration_path %> iPhones in Ireland</h2>
 </div>
 
+<div class ="center">
+  <%= link_to "6", new_user_registration_path, class: "btn btn-primary", data: { no_turbolink: true} %>
+ </div>
+
+ <div class ="center">
+  <%= link_to "5", new_user_registration_path, class: "btn btn-primary", data: { no_turbolink: true} %>
+ </div>
+ 
 <div class="center">
   <div class="row">
     <% @listings.each do |listing| %>
